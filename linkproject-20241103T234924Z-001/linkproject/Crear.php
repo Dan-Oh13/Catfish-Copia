@@ -2,6 +2,10 @@
 require_once "conecta.php";
 $conexion = conecta();
 $sql = "SELECT * FROM proyectos";
+
+//Cambios que se hicieron :Se cambio el nombre de la columna del id del proyecto por id_proyecto tambien se definio por defecto cupos y miembros como 0 para que no existiera problemas por estar definidas como not null.
+//Se debe tener una carpeta llamada "logos" para los logos de los proyectos y una carpeta llamada "foto" para los perfiles de usuario
+
 session_start(); // Iniciar la sesión para obtener el id_alumno
 // Suponiendo que el id_alumno está almacenado en la sesión
 $id_alumno = $_SESSION['id_alumno'];
